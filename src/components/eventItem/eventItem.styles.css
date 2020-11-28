@@ -1,0 +1,145 @@
+.eventItem {
+  display: flex;
+  /* width: 99%; */
+  padding: 1%;
+  border-bottom: solid 2px #424242;
+  position: relative;
+}
+
+.eventItem_date {
+  width: 25%;
+  height: 100px;
+  color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dayAndsuperscript {
+  display: flex;
+}
+
+.eventItem_description {
+  width: 75%;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.eventItem_timeAndAddress {
+  width: 25%;
+  height: 100px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.eventItem_description_title,
+.eventItem_timeAndAddress_time {
+  color: #cbd5cd;
+  border-bottom: solid 2px #424242;
+  padding: 15px 0;
+}
+
+.eventItem_description_details,
+.eventItem_timeAndAddress_address {
+  font-size: 0.8em;
+  line-height: 1.2em;
+  padding: 15px 0;
+  color: #8b8a89;
+}
+
+.eventItem_description_addDetails {
+  font-size: 0.8em;
+  line-height: 1.2em;
+  padding: 0 0 15px 0;
+  color: #f48412;
+}
+
+.eventItem_description_addDetails > p {
+  cursor: pointer;
+}
+
+.eventItem_descriptionContainer {
+  width: 75%;
+}
+
+.eventItem_descriptionContent {
+  display: flex;
+  width: 100%;
+}
+
+.messageIcon {
+  height: 20px;
+  width: 30px;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  padding: 20px;
+  background-color: #f48412;
+  border-radius: 100%;
+  display: none;
+}
+
+.messageIcon > img {
+  height: 30px;
+}
+
+/* Changes that shall be made when the browser window
+ shall be 600px wide or less: */
+@media only screen and (max-width: 900px) {
+  .eventItem {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10% 0;
+    height: 250px;
+    border-bottom: solid 2px #f6f6f6;
+  }
+
+  .eventItem_descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .eventItem_descriptionContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .eventItem_description {
+    height: 30px;
+    width: 100%;
+  }
+
+  .eventItem_timeAndAddress {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100px;
+  }
+  .eventItem_description_title {
+    padding: 0 0 15px 0;
+  }
+  .eventItem_description_details,
+  .SuperScript {
+    display: none;
+  }
+
+  .messageIcon {
+    display: block;
+  }
+
+  .eventItem_date {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    justify-content: flex-start;
+  }
+
+  .eventItem_timeAndAddress_time {
+    padding:  0  0 10px 0;
+  }
+}
